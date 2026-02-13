@@ -1,0 +1,39 @@
+/* Header compact — non-destructive overrides */
+:root{
+  --ym-header-pad-y: 8px;
+  --ym-logo-max-h: 58px;
+  --ym-menu-pad-y: 6px;
+}
+
+/* Desktop */
+.header{
+  padding-top: var(--ym-header-pad-y) !important;
+  padding-bottom: var(--ym-header-pad-y) !important;
+}
+
+.header__inner{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: unset !important;
+}
+
+.header__heading-logo{
+  max-height: var(--ym-logo-max-h) !important;
+  width: auto !important;
+}
+
+
+.header__menu-item{
+  padding-top: var(--ym-menu-pad-y) !important;
+  padding-bottom: var(--ym-menu-pad-y) !important;
+  line-height: 1.2 !important;
+}
+
+/* Mobile */
+@media (max-width: 749px){
+  :root{
+    --ym-header-pad-y: 8px;
+    --ym-logo-max-h: 34px;
+    --ym-menu-pad-y: 5px;
+  }
+}

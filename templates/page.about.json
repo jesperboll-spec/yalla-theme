@@ -1,0 +1,290 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_QfNVEJ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_PzkWQC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Yalla Mahjong",
+            "heading_size": "h1"
+          }
+        },
+        "text_ipQVXW": {
+          "type": "text",
+          "settings": {
+            "text": "Crafted beauty in every piece, connection in every game.",
+            "text_style": "body"
+          }
+        },
+        "buttons_xVLhzX": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore our collection",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PzkWQC",
+        "text_ipQVXW",
+        "buttons_xVLhzX"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/u5356688616_top-down_view_four_women_in_Dubai_playing_mahjong_l_c00efd59-de6e-41b0-94f9-1491bbb960df_1.png",
+        "image_overlay_opacity": 10,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_jRJbVm": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_da9Gfi": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Lifestyle Object, Disguised as a Game",
+            "heading_size": "h1"
+          }
+        },
+        "text_HFRe7w": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Yalla Mahjong creates exclusive, design-led Mahjong sets for modern hosting in Dubai.<br/><br/>Designed to be displayed, gifted, and played with intention - not hidden away or used casually.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_da9Gfi",
+        "text_HFRe7w"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_Dr3aE7": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_h9jawg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Designed for Social life, Not Nightlife",
+            "heading_size": "h1"
+          }
+        },
+        "text_n8p8hc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In Dubai, many women crave meaningful connection over loud venues and fleeting scenes.<br/><br/>Mahjong offers something difference - conversation, elegance, and continuity.</p><p>YM elevates that ritual through design.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_h9jawg",
+        "text_n8p8hc"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/u5356688616_top-down_view_four_women_in_Dubai_playing_mahjong_l_a786883b-e874-4d97-802e-c3f5a23533f5_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_4x9gMQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_WqL4KK": {
+          "type": "column",
+          "settings": {
+            "title": "Cheap by Design",
+            "text": "<p>Most Mahjong sets today are mass-produced, visually loud, and culturally mismatched.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_tYMHbk": {
+          "type": "column",
+          "settings": {
+            "title": "Not Gift-Worthy",
+            "text": "<p>They are not designed for display, gifting, or modern interiors.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mwMjYi": {
+          "type": "column",
+          "settings": {
+            "title": "Yalla Mahjong",
+            "text": "<p>Exclusive, custom-designed sets made to live on shelves in Dubai - not in cupboards.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_WqL4KK",
+        "column_tYMHbk",
+        "column_mwMjYi"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_bGVVP3": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_TqzL6G": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crafted to Be Seen",
+            "heading_size": "h1"
+          }
+        },
+        "text_CLrc9J": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each YM set is treated as an object first.<br/><br/>Materials, proportions, color, and typography are selected with restraint.</p><p>Branding is minimal. Exclusivity is built in.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_TqzL6G",
+        "text_CLrc9J"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/u5356688616_luxury_editorial_product_photography_premium_mahj_e8586a89-55a2-4933-9c21-611fb3e6cee1_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_LzF3xp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Pnz8wG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made to be introduced",
+            "heading_size": "h1"
+          }
+        },
+        "text_3mELFh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Beginners are welcome - not through manuals or shortcuts, but through guided, social sessions led by the host.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_JAC3ry": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Pnz8wG",
+        "text_3mELFh",
+        "button_JAC3ry"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/YM_logo.svg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_QfNVEJ",
+    "rich_text_jRJbVm",
+    "image_with_text_Dr3aE7",
+    "multicolumn_4x9gMQ",
+    "image_with_text_bGVVP3",
+    "image_with_text_LzF3xp"
+  ]
+}

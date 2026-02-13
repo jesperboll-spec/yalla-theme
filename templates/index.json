@@ -1,0 +1,256 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_QtEFkQ": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_gy7xzJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Yallah Majong",
+            "heading_size": "h1"
+          }
+        },
+        "text_AHy4Hj": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_ytVUTh": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop first collection",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_gy7xzJ",
+        "text_AHy4Hj",
+        "buttons_ytVUTh"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 10,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "custom_liquid_zNRhqQ": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".hero-overlay {min-height: 85vh; display: flex; align-items: flex-end; padding: 6vw; padding-top: 140px; /* space for overlay header */}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"hero-video-wrap\">\n  <video class=\"hero-video\" autoplay muted loop playsinline preload=\"auto\">\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/fbee62288dbc4b1ea726e130ab1e3885.mp4\" type=\"video/mp4\">\n  </video>\n\n  <div class=\"hero-overlay\">\n    <div class=\"hero-inner\">\n      <h1>Yallah Majong</h1>\n      <p>Give customers details about the banner image(s) or content on the template.</p>\n      <a class=\"hero-btn\" href=\"/collections/all\">Shop first collection</a>\n    </div>\n  </div>\n</div>\n\n<style>\n.hero-video-wrap{position:relative;width:100%;min-height:70vh;overflow:hidden}\n.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}\n.hero-overlay{position:relative;z-index:2;display:flex;align-items:flex-end;min-height:70vh;padding:6vw}\n.hero-inner{background:#fff;padding:32px;max-width:520px}\n.hero-inner h1{margin:0 0 12px;font-size:42px;line-height:1.05}\n.hero-inner p{margin:0 0 18px;opacity:.85}\n.hero-btn{display:inline-block;padding:12px 18px;border:1px solid #111;background:#111;color:#fff;text-decoration:none}\n@media (max-width: 749px){\n  .hero-video-wrap,.hero-overlay{min-height:60vh}\n  .hero-inner{padding:22px}\n  .hero-inner h1{font-size:34px}\n}\n</style>",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_JH7Jeg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mgQBjL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_yaFdxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_imMXfe": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mgQBjL",
+        "text_yaFdxq",
+        "button_imMXfe"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_A4K6bg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_4q7RdU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_H8HWpm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_DhJacw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_4q7RdU",
+        "text_H8HWpm",
+        "button_DhJacw"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_BJG77U": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "",
+        "products_to_show": 2,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 1,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_3fxyPf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ymWfwh": {
+          "type": "column",
+          "settings": {
+            "title": "Materials",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gXgmMG": {
+          "type": "column",
+          "settings": {
+            "title": "Design",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_n8DBiQ": {
+          "type": "column",
+          "settings": {
+            "title": "Shipping",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_ymWfwh",
+        "column_gXgmMG",
+        "column_n8DBiQ"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-a873b3c3-ee2d-4bad-80e7-77cb4df3d547",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_QtEFkQ",
+    "custom_liquid_zNRhqQ",
+    "rich_text_JH7Jeg",
+    "image_with_text_A4K6bg",
+    "featured_collection_BJG77U",
+    "multicolumn_3fxyPf"
+  ]
+}
