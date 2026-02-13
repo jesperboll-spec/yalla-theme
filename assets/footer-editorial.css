@@ -135,16 +135,16 @@
   font-size: 1.25em;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 .footer .footer-block--newsletter .footer-newsletter__subline {
   display: block;
   margin-top: 0.35rem;
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-weight: 400;
   letter-spacing: 0.08em;
-  text-transform: none;
+  text-transform: uppercase;
 }
 
 /* Main email text — THIS is the hero */
