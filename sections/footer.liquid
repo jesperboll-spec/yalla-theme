@@ -170,7 +170,16 @@
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
               {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+                {%- assign heading_sentences = section.settings.newsletter_heading | split: '. ' -%}
+                {%- assign heading_lead = heading_sentences.first | strip -%}
+                {%- assign heading_rest = section.settings.newsletter_heading | remove_first: heading_lead | strip -%}
+                {%- assign heading_rest = heading_rest | remove_first: '.' | strip -%}
+                <h2 class="footer-block__heading inline-richtext">
+                  <span class="footer-newsletter__lead">{{ heading_lead }}.</span>
+                  {%- if heading_rest != blank -%}
+                    <span class="footer-newsletter__subline">{{ heading_rest }}</span>
+                  {%- endif -%}
+                </h2>
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
