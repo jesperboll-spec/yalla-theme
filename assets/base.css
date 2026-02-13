@@ -2396,9 +2396,10 @@ body:has(#MainContent > .shopify-section:first-child .banner) .section-header {
 body:has(#MainContent > .shopify-section:first-child .banner)
   .section-header:not(.shopify-section-header-sticky)
   .header-wrapper {
-  background-color: transparent;
+  background: transparent;
+  background-image: none;
+  --gradient-background: transparent;
   --color-foreground: 255, 255, 255;
-  --color-background: 0, 0, 0;
 }
 
 body:has(#MainContent > .shopify-section:first-child .banner)
