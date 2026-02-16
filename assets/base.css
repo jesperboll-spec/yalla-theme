@@ -2386,29 +2386,18 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
-body:has(#MainContent > .shopify-section:first-child .banner) .section-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-body:has(#MainContent > .shopify-section:first-child .banner)
-  .section-header:not(.shopify-section-header-sticky)
-  .header-wrapper {
+.template-index .section-header:not(.scrolled-past-header) .header-wrapper--transparent-home {
   background: transparent;
   background-image: none;
   --gradient-background: transparent;
   --color-foreground: 255, 255, 255;
 }
 
-body:has(#MainContent > .shopify-section:first-child .banner)
-  .section-header:not(.shopify-section-header-sticky)
-  .header-wrapper--border-bottom {
+.template-index .section-header:not(.scrolled-past-header) .header-wrapper--transparent-home.header-wrapper--border-bottom {
   border-bottom-color: transparent;
 }
 
-body:has(#MainContent > .shopify-section:first-child .banner) .section-header .header-wrapper {
+.template-index .section-header .header-wrapper--transparent-home {
   transition: background-color 0.2s ease;
 }
 
