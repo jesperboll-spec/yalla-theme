@@ -2386,6 +2386,31 @@ input[type='checkbox'] {
   background-color: rgb(var(--color-background));
 }
 
+body:has(.header-wrapper--transparent-home) .section-header {
+  margin-bottom: 0 !important;
+}
+
+body:has(.header-wrapper--transparent-home) #MainContent > :first-child {
+  margin-top: calc(-1 * var(--header-height));
+}
+
+body:has(.header-wrapper--transparent-home) .section-header:not(.scrolled-past-header) .header-wrapper--transparent-home {
+  background: transparent;
+  background-image: none;
+  --gradient-background: transparent;
+  --color-foreground: 255, 255, 255;
+}
+
+body:has(.header-wrapper--transparent-home)
+  .section-header:not(.scrolled-past-header)
+  .header-wrapper--transparent-home.header-wrapper--border-bottom {
+  border-bottom-color: transparent;
+}
+
+body:has(.header-wrapper--transparent-home) .section-header .header-wrapper--transparent-home {
+  transition: background-color 0.2s ease;
+}
+
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
@@ -3707,4 +3732,3 @@ body.template-page-about.gradient {
   background-position: right center;
   background-size: contain; /* try 70% / 90% / 120% depending on look */
 }
-
