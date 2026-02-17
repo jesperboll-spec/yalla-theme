@@ -118,9 +118,7 @@
     assign header_tag = 'sticky-header'
   endif
 
-  if request.page_type == 'index' or request.page_type == 'collection' or request.page_type == 'list-collections'
-    assign transparent_header_enabled = true
-  elsif request.page_type == 'page' and page and page.handle == 'about'
+  if request.page_type == 'index' or request.page_type == 'collection' or request.page_type == 'list-collections' or request.page_type == 'page'
     assign transparent_header_enabled = true
   endif
 %}
