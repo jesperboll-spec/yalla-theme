@@ -10,24 +10,6 @@
   assign shop_heading = section.settings.shop_heading | default: 'Shop'
   assign about_heading = section.settings.about_heading | default: 'About'
   assign customers_heading = section.settings.customers_heading | default: 'Customers'
-  assign shop_menu = section.settings.shop_menu
-  assign about_menu = section.settings.about_menu
-  assign customers_menu = section.settings.customers_menu
-
-  if shop_menu == blank or about_menu == blank or customers_menu == blank
-    for block in section.blocks
-      if block.type == 'link_list'
-        assign block_heading = block.settings.heading | downcase | strip
-        if shop_menu == blank and block_heading == 'shop'
-          assign shop_menu = block.settings.menu
-        elsif about_menu == blank and block_heading == 'about'
-          assign about_menu = block.settings.menu
-        elsif customers_menu == blank and block_heading == 'customers'
-          assign customers_menu = block.settings.menu
-        endif
-      endif
-    endfor
-  endif
 -%}
 
 {%- style -%}
@@ -77,8 +59,8 @@
     <div class="footer__menu-column">
       <h2 class="footer-block__heading inline-richtext">{{ shop_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
-        {%- if shop_menu != blank -%}
-          {%- for link in shop_menu.links -%}
+        {%- if section.settings.shop_menu != blank -%}
+          {%- for link in section.settings.shop_menu.links -%}
             <li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>
           {%- endfor -%}
         {%- else -%}
@@ -90,8 +72,8 @@
     <div class="footer__menu-column">
       <h2 class="footer-block__heading inline-richtext">{{ about_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
-        {%- if about_menu != blank -%}
-          {%- for link in about_menu.links -%}
+        {%- if section.settings.about_menu != blank -%}
+          {%- for link in section.settings.about_menu.links -%}
             <li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>
           {%- endfor -%}
         {%- else -%}
@@ -107,8 +89,8 @@
     <div class="footer__menu-column">
       <h2 class="footer-block__heading inline-richtext">{{ customers_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
-        {%- if customers_menu != blank -%}
-          {%- for link in customers_menu.links -%}
+        {%- if section.settings.customers_menu != blank -%}
+          {%- for link in section.settings.customers_menu.links -%}
             <li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>
           {%- endfor -%}
         {%- else -%}
@@ -121,7 +103,7 @@
           {%- if pages['privacy-policy'] != blank -%}<li><a href="{{ pages['privacy-policy'].url }}" class="link link--text list-menu__item list-menu__item--link">Privacy Policy</a></li>{%- endif -%}
         {%- endif -%}
 
-        {%- if section.settings.show_policies_in_customers and customers_menu == blank -%}
+        {%- if section.settings.show_policies_in_customers and section.settings.customers_menu == blank -%}
           {%- if shop.refund_policy != blank -%}
             <li><a href="{{ shop.refund_policy.url }}" class="link link--text list-menu__item list-menu__item--link">{{ shop.refund_policy.title | escape }}</a></li>
           {%- endif -%}
@@ -219,38 +201,6 @@
 {% schema %}
 {
   "name": "t:sections.footer.name",
-  "settings": [
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
-    },
-    {
-      "type": "color",
-      "id": "footer_background",
-      "label": "Footer background",
-      "default": "#59766B"
-    },
-    {
-      "type": "text",
-      "name": "t:sections.footer.blocks.text.name",
-      "settings": [
-        {
-          "type": "inline_richtext",
-          "id": "heading",
-          "default": "t:sections.footer.blocks.text.settings.heading.default",
-          "label": "t:sections.footer.blocks.text.settings.heading.label"
-        },
-        {
-          "type": "richtext",
-          "id": "subtext",
-          "default": "t:sections.footer.blocks.text.settings.subtext.default",
-          "label": "t:sections.footer.blocks.text.settings.subtext.label"
-        }
-      ]
-    }
-  ],
   "settings": [
     {
       "type": "color_scheme",
