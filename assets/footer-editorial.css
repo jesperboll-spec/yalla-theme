@@ -14,14 +14,19 @@
 
 .footer__layout {
   display: grid;
-  grid-template-columns: minmax(90px, 1fr) max-content minmax(140px, 1fr);
+  grid-template-columns: 20% max-content minmax(120px, 1fr);
   column-gap: 3.2rem;
   align-items: start;
+  justify-content: start;
 }
 
 .footer__logo-column,
 .footer__newsletter-column {
   min-height: 180px;
+}
+
+.footer__logo-column {
+  max-width: 120px;
 }
 
 .footer__logo-column,
