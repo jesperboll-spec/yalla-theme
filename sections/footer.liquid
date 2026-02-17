@@ -4,18 +4,10 @@
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 
-{%- liquid
-  assign footer_background = section.settings.footer_background | default: '#59766B'
-  assign brand_tagline = section.settings.brand_tagline | default: 'Crafted beauty in every piece,<br>connection in every game'
-  assign shop_heading = section.settings.shop_heading | default: 'Shop'
-  assign about_heading = section.settings.about_heading | default: 'About'
-  assign customers_heading = section.settings.customers_heading | default: 'Customers'
--%}
-
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
-    background-color: {{ footer_background }};
+    background-color: {{ section.settings.footer_background }};
   }
 
   .section-{{ section.id }}-padding {
@@ -53,11 +45,13 @@
         </div>
       {%- endif -%}
 
-      <div class="footer__brand-tagline rte">{{ brand_tagline }}</div>
+      {%- if section.settings.brand_tagline != blank -%}
+        <div class="footer__brand-tagline rte">{{ section.settings.brand_tagline }}</div>
+      {%- endif -%}
     </div>
 
     <div class="footer__menu-column">
-      <h2 class="footer-block__heading inline-richtext">{{ shop_heading }}</h2>
+      <h2 class="footer-block__heading inline-richtext">{{ section.settings.shop_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
         {%- if section.settings.shop_menu != blank -%}
           {%- for link in section.settings.shop_menu.links -%}
@@ -70,7 +64,7 @@
     </div>
 
     <div class="footer__menu-column">
-      <h2 class="footer-block__heading inline-richtext">{{ about_heading }}</h2>
+      <h2 class="footer-block__heading inline-richtext">{{ section.settings.about_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
         {%- if section.settings.about_menu != blank -%}
           {%- for link in section.settings.about_menu.links -%}
@@ -87,7 +81,7 @@
     </div>
 
     <div class="footer__menu-column">
-      <h2 class="footer-block__heading inline-richtext">{{ customers_heading }}</h2>
+      <h2 class="footer-block__heading inline-richtext">{{ section.settings.customers_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
         {%- if section.settings.customers_menu != blank -%}
           {%- for link in section.settings.customers_menu.links -%}
