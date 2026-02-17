@@ -2851,6 +2851,20 @@ details[open] > .header__submenu {
   z-index: 1;
 }
 
+header-menu > details:hover > .header__submenu,
+details-disclosure > details:hover > .header__submenu,
+.mega-menu:hover .mega-menu__content {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+header-menu > details:hover > .header__menu-item .icon-caret,
+details-disclosure > details:hover > .header__menu-item .icon-caret,
+.mega-menu:hover > .header__menu-item .icon-caret {
+  transform: rotate(180deg);
+}
+
 @media (prefers-reduced-motion) {
   details[open] > .header__submenu {
     opacity: 1;
