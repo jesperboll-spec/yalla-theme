@@ -3697,6 +3697,63 @@ details-disclosure > details {
   }
 }
 /* =====================================
+   GLOBAL TYPOGRAPHY + COLORS (EXCEPT MENU)
+   ===================================== */
+
+:root {
+  --font-body-family: "Tiempos Text", serif;
+  --font-body-style: normal;
+  --font-body-weight: 400;
+
+  --font-heading-family: "Canela", serif;
+  --font-heading-style: normal;
+  --font-heading-weight: 700;
+
+  --ym-font-subheading-family: "Neue Haas Grotesk Text", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ym-font-subheading-weight: 500;
+
+  --color-foreground: 40, 63, 53;
+  --color-background: 247, 244, 239;
+  --gradient-background: rgb(247, 244, 239);
+}
+
+body {
+  color: #283F35;
+  background-color: #F7F4EF;
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  letter-spacing: 0.4pt;
+}
+
+h1, h2,
+.h0, .h1, .h2 {
+  font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);
+  font-weight: var(--font-heading-weight);
+  letter-spacing: 4.2pt;
+}
+
+h3, h4, h5, h6,
+.h3, .h4, .h5,
+.subtitle,
+.caption-with-letter-spacing {
+  font-family: var(--ym-font-subheading-family);
+  font-weight: var(--ym-font-subheading-weight);
+  letter-spacing: 1.8pt;
+}
+
+p,
+.rte,
+.rte p,
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-body-family);
+  letter-spacing: 0.4pt;
+}
+
+/* =====================================
    HEADER MENU — SÖHNE (ALL CAPS)
    ===================================== */
 
