@@ -14,8 +14,8 @@
 
 .footer__layout {
   display: grid;
-  grid-template-columns: 20% 40% 40%;
-  column-gap: 2.8rem;
+  grid-template-columns: minmax(90px, 1fr) max-content minmax(140px, 1fr);
+  column-gap: 3.2rem;
   align-items: start;
 }
 
@@ -24,15 +24,28 @@
   min-height: 180px;
 }
 
+.footer__logo-column,
+.footer__newsletter-column {
+  white-space: nowrap;
+}
+
+.footer__menu-heading {
+  white-space: nowrap;
+}
+
+.footer__menu-column {
+  min-width: max-content;
+}
+
 .footer__menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 3rem; row-gap: 1.2rem;
 }
 
 .footer__menu-heading {
   margin: 0 0 0.9rem;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 500;
   line-height: 1.3;
 }
@@ -49,7 +62,7 @@
 .footer__menu-link {
   text-decoration: none;
   opacity: 0.95;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1.45;
   white-space: nowrap;
 }
@@ -98,12 +111,9 @@
 
 @media screen and (max-width: 1200px) {
   .footer__menu-grid {
-    gap: 1.4rem;
+    column-gap: 1.8rem;
   }
 
-  .footer__menu-link {
-    white-space: normal;
-  }
 }
 
 @media screen and (max-width: 989px) {

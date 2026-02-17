@@ -16,7 +16,7 @@
 
 <footer class="footer section-{{ section.id }}-padding">
   <div class="page-width footer__layout">
-    <div class="footer__logo-column"></div>
+    <div class="footer__logo-column">[logo]</div>
 
     <div class="footer__menu-column">
       <div class="footer__menu-grid">
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="footer__newsletter-column"></div>
+    <div class="footer__newsletter-column">[newsletter]</div>
   </div>
 
   <div class="page-width footer__bottom">
@@ -47,9 +47,12 @@
 
     <ul class="footer__policy-list footer__policy-list--inline list-unstyled" role="list">
       {%- for policy in shop.policies -%}
+        {%- assign policy_title = policy.title | downcase -%}
         {%- if policy != blank
           and policy.handle != 'terms-of-service'
           and policy.handle != 'contact-information'
+          and policy_title != 'terms of service'
+          and policy_title != 'contact information'
         -%}
           <li>
             <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
