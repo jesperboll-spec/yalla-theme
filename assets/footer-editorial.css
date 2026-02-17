@@ -1,188 +1,149 @@
-/* =========================================================
-   Footer — Editorial alignment with Contact page
-   Safe, scoped, reversible
-   ========================================================= */
-
+/* Footer layout override */
 .footer {
-  background: rgb(var(--color-background));
-  color: rgb(var(--color-foreground));
+  background: #59766b !important;
 }
 
-/* Reduce dead vertical space */
+.footer .page-width {
+  max-width: 150rem;
+}
+
 .footer__content-top {
-  padding-top: clamp(28px, 5vw, 64px);
-  padding-bottom: 24px;
+  padding-top: clamp(40px, 5vw, 72px);
+  padding-bottom: 30px;
 }
 
-/* Keep newsletter constrained like Contact form */
-.footer .footer-block--newsletter,
-.footer .footer-block--newsletter .footer-block__details-content {
-  max-width: 520px;
+.footer__custom-grid {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.8fr) minmax(130px, 0.9fr) minmax(130px, 0.9fr) minmax(130px, 0.9fr) minmax(280px, 1.6fr);
+  gap: clamp(20px, 2.8vw, 44px);
+  align-items: start;
 }
 
-/* Newsletter heading (kicker style) */
-.footer .footer-block--newsletter .footer-block__heading {
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin-bottom: 12px;
+.footer__brand-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* Remove boxed field chrome */
-.footer .newsletter-form__field-wrapper .field {
-  border: 0 !important;
+.footer__brand-tagline {
+  margin-top: 1.8rem;
 }
 
-/* Line-only email input */
-.footer .newsletter-form__field-wrapper .field__input {
-  background: transparent !important;
-  border: 0 !important;
-  border-bottom: 1.5px solid rgba(var(--color-foreground), 0.35) !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 12px 0 10px !important;
-  font-size: 1.15rem;
+.footer__brand-tagline p {
+  margin: 0;
 }
 
-.footer .newsletter-form__field-wrapper .field__input:focus {
-  border-bottom-color: rgba(var(--color-foreground), 0.65) !important;
+.footer__menu-column .footer-block__heading,
+.footer-block--newsletter .footer-block__heading {
+  margin: 0 0 1.8rem;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
-/* Arrow button (no box) */
-.footer .newsletter-form__field-wrapper .field__button {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  color: rgb(var(--color-foreground)) !important;
-  opacity: 0.8;
+.footer__menu-column li {
+  margin: 0 0 1rem;
 }
 
-.footer .newsletter-form__field-wrapper .field__button:hover {
-  opacity: 1;
-}
-
-/* Bottom bar: editorial, quiet */
-.footer__content-bottom {
-  padding-top: 18px;
-  padding-bottom: 18px;
-  border-top: 1px solid rgba(var(--color-foreground), 0.12);
-}
-
-.footer__content-bottom,
-.footer__copyright {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-/* Subtle underline on legal links */
-.footer__content-bottom a,
-.footer__copyright a {
+.footer__menu-column .list-menu__item--link {
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--color-foreground), 0.25);
-  padding-bottom: 2px;
 }
 
-.footer__content-bottom a:hover,
-.footer__copyright a:hover {
-  border-bottom-color: rgba(var(--color-foreground), 0.55);
+.footer .footer-block--newsletter {
+  margin-top: 0;
+  align-items: flex-start;
 }
-/* =========================================================
-   Kill ALL Dawn newsletter field chrome (wrapper + states)
-   ========================================================= */
 
-/* Remove wrapper box */
+.footer .footer-block__newsletter,
+.footer .footer-block--newsletter {
+  text-align: left !important;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: none;
+}
+
+.footer .footer-block--newsletter .footer-block__heading {
+  text-align: left;
+  font-size: calc(var(--font-heading-scale) * 1.8rem);
+  margin-bottom: 1.2rem;
+}
+
+.footer .newsletter-form__field-wrapper {
+  max-width: none;
+}
+
 .footer .newsletter-form__field-wrapper .field {
-  background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
-  outline: none !important;
+  background: transparent !important;
 }
 
-/* Remove any pseudo-element borders */
 .footer .newsletter-form__field-wrapper .field::before,
 .footer .newsletter-form__field-wrapper .field::after {
   display: none !important;
-  content: none !important;
 }
 
-/* Ensure input itself is line-only */
 .footer .newsletter-form__field-wrapper .field__input {
   background: transparent !important;
   border: 0 !important;
-  border-bottom: 1.5px solid rgba(var(--color-foreground), 0.35) !important;
-  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.8) !important;
   box-shadow: none !important;
-  outline: none !important;
-}
-
-/* Focus state = darker line only */
-.footer .newsletter-form__field-wrapper .field__input:focus {
-  border-bottom-color: rgba(var(--color-foreground), 0.65) !important;
-}
-/* =========================================================
-   Footer typography — strong editorial scale
-   ========================================================= */
-
-/* Kicker stays refined, not loud */
-.footer .footer-block--newsletter .footer-block__heading {
-  font-size: 1rem;
-  letter-spacing: 0.16em;
-}
-
-.footer .footer-block--newsletter .footer-newsletter__lead {
-  display: block;
-  font-size: 1.25em;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.footer .footer-block--newsletter .footer-newsletter__subline {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 1.1em;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* Main email text — THIS is the hero */
-.footer .newsletter-form__field-wrapper .field__input {
-  font-size: 1.75rem !important;   /* deliberate, editorial */
-  line-height: 1.15;
-  padding-bottom: 12px !important;
-}
-
-.footer .newsletter-form__field-wrapper .field__button {
-  font-size: 1.75rem;
-  margin-left: 16px;
-  transform: translateY(1px);
-}
-
- /* =========================================================
-   Footer newsletter — label behaves like placeholder JB 08/02-1957
-   ========================================================= */
-
-.footer .newsletter-form__field-wrapper .field {
-  position: relative; /* anchor absolute label */
+  border-radius: 0 !important;
+  padding: 12px 0 10px !important;
+  font-size: 3rem !important;
 }
 
 .footer .newsletter-form__field-wrapper .field__label {
-  position: absolute;
   left: 0;
-  top: 0;
-  font-size: 1.75rem;
-  line-height: 1.15;
-  pointer-events: none;
-  opacity: 0.6;
-  transition: opacity 0.15s ease;
 }
 
-/* Hide label when focused OR when there is typed content */
-.footer .newsletter-form__field-wrapper .field__input:focus ~ .field__label,
-.footer .newsletter-form__field-wrapper .field__input:not(:placeholder-shown) ~ .field__label {
-  opacity: 0;
+.footer .newsletter-form__field-wrapper .field__button {
+  width: auto;
+  padding-left: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer .footer__list-social {
+  margin-top: 1.8rem;
+  justify-content: flex-start;
+}
+
+.footer__content-bottom--simple {
+  border-top: 0;
+  padding-top: 1.8rem;
+}
+
+.footer__content-bottom--simple .footer__content-bottom-wrapper {
+  justify-content: flex-start;
+}
+
+.footer__content-bottom--simple .footer__copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.footer__content-bottom--simple .copyright__content a {
+  border: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer__custom-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer .footer-block--newsletter {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .footer__custom-grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
 }
 
 /* Custom footer layout */

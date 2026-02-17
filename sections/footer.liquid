@@ -77,7 +77,7 @@
     <div class="footer__menu-column">
       <h2 class="footer-block__heading inline-richtext">{{ shop_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
-        {%- if shop_menu != blank -%}
+        {%- if shop_menu != blank and shop_menu.links.size > 0 -%}
           {%- for link in shop_menu.links -%}
             <li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>
           {%- endfor -%}
@@ -90,7 +90,7 @@
     <div class="footer__menu-column">
       <h2 class="footer-block__heading inline-richtext">{{ about_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
-        {%- if about_menu != blank -%}
+        {%- if about_menu != blank and about_menu.links.size > 0 -%}
           {%- for link in about_menu.links -%}
             <li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>
           {%- endfor -%}
@@ -107,7 +107,7 @@
     <div class="footer__menu-column">
       <h2 class="footer-block__heading inline-richtext">{{ customers_heading }}</h2>
       <ul class="footer-block__details-content list-unstyled">
-        {%- if customers_menu != blank -%}
+        {%- if customers_menu != blank and customers_menu.links.size > 0 -%}
           {%- for link in customers_menu.links -%}
             <li><a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">{{ link.title | escape }}</a></li>
           {%- endfor -%}
@@ -121,7 +121,7 @@
           {%- if pages['privacy-policy'] != blank -%}<li><a href="{{ pages['privacy-policy'].url }}" class="link link--text list-menu__item list-menu__item--link">Privacy Policy</a></li>{%- endif -%}
         {%- endif -%}
 
-        {%- if section.settings.show_policies_in_customers and customers_menu == blank -%}
+        {%- if section.settings.show_policies_in_customers and (customers_menu == blank or customers_menu.links.size == 0) -%}
           {%- if shop.refund_policy != blank -%}
             <li><a href="{{ shop.refund_policy.url }}" class="link link--text list-menu__item list-menu__item--link">{{ shop.refund_policy.title | escape }}</a></li>
           {%- endif -%}
@@ -173,7 +173,7 @@
                   id="Subscribe"
                   aria-label="{{ 'newsletter.button_label' | t }}"
                 >
-                  <span class="svg-wrapper">{{- 'icon-arrow.svg' | inline_asset_content -}}</span>
+                  {{ 'newsletter.button_label' | t }}
                 </button>
               </div>
               {%- if form.errors -%}
@@ -207,7 +207,7 @@
   </div>
 
   <div class="footer__content-bottom footer__content-bottom--simple">
-    <div class="footer__content-bottom-wrapper page-width footer__content-bottom-wrapper--center">
+    <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__copyright caption">
         <small class="copyright__content">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}</small>
         <small class="copyright__content">{{ powered_by_link }}</small>
@@ -225,12 +225,6 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
-    },
-    {
-      "type": "color",
-      "id": "footer_background",
-      "label": "Footer background",
-      "default": "#59766B"
     },
     {
       "type": "text",
