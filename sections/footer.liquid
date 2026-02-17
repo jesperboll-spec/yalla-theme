@@ -20,48 +20,49 @@
 
     <div class="footer__menu-column">
       <div class="footer__menu-grid">
-        <div class="footer__menu-group">
-          <h2 class="footer__menu-heading">{{ section.settings.shop_heading | escape }}</h2>
-          {%- if section.settings.shop_menu != blank -%}
-            <ul class="footer__menu-list list-unstyled">
-              {%- for link in section.settings.shop_menu.links -%}
-                <li>
-                  <a class="footer__menu-link" href="{{ link.url }}">{{ link.title | escape }}</a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
-
-        <div class="footer__menu-group">
-          <h2 class="footer__menu-heading">{{ section.settings.about_heading | escape }}</h2>
-          {%- if section.settings.about_menu != blank -%}
-            <ul class="footer__menu-list list-unstyled">
-              {%- for link in section.settings.about_menu.links -%}
-                <li>
-                  <a class="footer__menu-link" href="{{ link.url }}">{{ link.title | escape }}</a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
-
-        <div class="footer__menu-group">
-          <h2 class="footer__menu-heading">{{ section.settings.support_heading | escape }}</h2>
-          {%- if section.settings.support_menu != blank -%}
-            <ul class="footer__menu-list list-unstyled">
-              {%- for link in section.settings.support_menu.links -%}
-                <li>
-                  <a class="footer__menu-link" href="{{ link.url }}">{{ link.title | escape }}</a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
+        {%- if section.settings.menu != blank -%}
+          {%- for link in section.settings.menu.links limit: 3 -%}
+            <div class="footer__menu-group">
+              <h2 class="footer__menu-heading">{{ link.title | escape }}</h2>
+              {%- if link.links.size > 0 -%}
+                <ul class="footer__menu-list list-unstyled">
+                  {%- for child_link in link.links -%}
+                    <li>
+                      <a class="footer__menu-link" href="{{ child_link.url }}">{{ child_link.title | escape }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
       </div>
     </div>
 
     <div class="footer__newsletter-column"></div>
+  </div>
+
+  <div class="page-width footer__bottom">
+    <div class="footer__copyright">
+      Copyright © 2026, Yalla Mahjong. All rights reserved.
+      <a href="/policies/terms-of-service">See our terms of use</a>
+      and
+      <a href="/policies/privacy-policy">privacy notice</a>.
+    </div>
+
+    <div class="footer__policies">
+      <ul class="footer__policy-list list-unstyled">
+        {%- for policy in shop.policies -%}
+          {%- if policy != blank -%}
+            <li>
+              <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="footer__bottom-spacer"></div>
   </div>
 </footer>
 
@@ -70,37 +71,10 @@
   "name": "Footer",
   "settings": [
     {
-      "type": "text",
-      "id": "shop_heading",
-      "label": "Shop column heading",
-      "default": "Shop"
-    },
-    {
       "type": "link_list",
-      "id": "shop_menu",
-      "label": "Shop menu"
-    },
-    {
-      "type": "text",
-      "id": "about_heading",
-      "label": "About column heading",
-      "default": "About"
-    },
-    {
-      "type": "link_list",
-      "id": "about_menu",
-      "label": "About menu"
-    },
-    {
-      "type": "text",
-      "id": "support_heading",
-      "label": "Support column heading",
-      "default": "Support"
-    },
-    {
-      "type": "link_list",
-      "id": "support_menu",
-      "label": "Support menu"
+      "id": "menu",
+      "label": "Footer menu",
+      "default": "footer"
     },
     {
       "type": "header",
