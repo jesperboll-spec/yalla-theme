@@ -293,6 +293,98 @@
       >
     {%- endif -%}
 
+    <style>
+      /* Codex override: enforce global typography/colors in code (menu rules remain untouched) */
+      :root {
+        --font-body-family: "Tiempos Text", serif !important;
+        --font-body-style: normal !important;
+        --font-body-weight: 400 !important;
+
+        --font-heading-family: "Canela", serif !important;
+        --font-heading-style: normal !important;
+        --font-heading-weight: 700 !important;
+
+        --color-foreground: 40, 63, 53 !important;
+        --color-background: 247, 244, 239 !important;
+        --gradient-background: rgb(247, 244, 239) !important;
+      }
+
+      body {
+        color: #283F35 !important;
+        background-color: #F7F4EF !important;
+        font-family: "Tiempos Text", serif !important;
+        letter-spacing: 0.4pt !important;
+      }
+
+      p,
+      .rte,
+      .rte p,
+      input,
+      textarea,
+      select,
+      button {
+        font-family: "Tiempos Text", serif !important;
+        letter-spacing: 0.4pt !important;
+      }
+
+      h1,
+      h2,
+      .h0,
+      .h1,
+      .h2 {
+        font-family: "Canela", serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 4.2pt !important;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6,
+      .h3,
+      .h4,
+      .h5,
+      .subtitle,
+      .caption-with-letter-spacing {
+        font-family: "Neue Haas Grotesk Text", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+        letter-spacing: 1.8pt !important;
+      }
+
+
+      /* Keep menu exactly as before */
+      .header__menu-item,
+      .header__inline-menu .list-menu__item,
+      .menu-drawer__menu-item {
+        font-family: "Soehne", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        line-height: 1 !important;
+        padding: 1.2rem 1.6rem !important;
+      }
+
+      .header__menu-item {
+        opacity: 0.85;
+      }
+
+      .header__menu-item:hover {
+        opacity: 1;
+      }
+
+      .header__menu-item::after {
+        display: none !important;
+      }
+
+      .header__menu-item .icon-caret {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.4rem;
+        opacity: 0.6;
+      }
+    </style>
+
+
     <script>
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
