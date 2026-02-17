@@ -43,26 +43,20 @@
   </div>
 
   <div class="page-width footer__bottom">
-    <div class="footer__copyright">
-      Copyright © 2026, Yalla Mahjong. All rights reserved.
-      <a href="/policies/terms-of-service">See our terms of use</a>
-      and
-      <a href="/policies/privacy-policy">privacy notice</a>.
-    </div>
+    <p class="footer__copyright">Copyright © 2026, Yalla Mahjong. All rights reserved</p>
 
-    <div class="footer__policies">
-      <ul class="footer__policy-list list-unstyled">
-        {%- for policy in shop.policies -%}
-          {%- if policy != blank -%}
-            <li>
-              <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
-            </li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
-    </div>
-
-    <div class="footer__bottom-spacer"></div>
+    <ul class="footer__policy-list footer__policy-list--inline list-unstyled" role="list">
+      {%- for policy in shop.policies -%}
+        {%- if policy != blank
+          and policy.handle != 'terms-of-service'
+          and policy.handle != 'contact-information'
+        -%}
+          <li>
+            <a href="{{ policy.url }}">{{ policy.title | escape }}</a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
   </div>
 </footer>
 

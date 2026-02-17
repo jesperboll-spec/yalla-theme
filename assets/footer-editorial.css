@@ -14,8 +14,8 @@
 
 .footer__layout {
   display: grid;
-  grid-template-columns: 25% 35% 40%;
-  column-gap: 2rem;
+  grid-template-columns: 20% 40% 40%;
+  column-gap: 2.8rem;
   align-items: start;
 }
 
@@ -27,11 +27,11 @@
 .footer__menu-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
 .footer__menu-heading {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.9rem;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.3;
@@ -43,14 +43,15 @@
 }
 
 .footer__menu-list li + li {
-  margin-top: 0.45rem;
+  margin-top: 0.55rem;
 }
 
 .footer__menu-link {
   text-decoration: none;
   opacity: 0.95;
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.45;
+  white-space: nowrap;
 }
 
 .footer__menu-link:hover {
@@ -58,46 +59,55 @@
 }
 
 .footer__bottom {
-  display: grid;
-  grid-template-columns: 25% 35% 40%;
-  column-gap: 2rem;
-  align-items: start;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.6rem;
+  align-items: center;
+  margin-top: 2.4rem;
   padding-top: 1.2rem;
   border-top: 1px solid rgba(247, 244, 239, 0.25);
 }
 
 .footer__copyright {
+  margin: 0;
   font-size: 1.3rem;
   line-height: 1.5;
 }
 
-.footer__copyright a {
-  text-decoration: underline;
-}
-
-.footer__policy-list {
+.footer__policy-list--inline {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
 }
 
-.footer__policy-list li + li {
-  margin-top: 0.35rem;
+.footer__policy-list--inline li {
+  margin: 0;
 }
 
-.footer__policy-list a {
+.footer__policy-list--inline a {
   text-decoration: none;
   font-size: 1.3rem;
   line-height: 1.5;
 }
 
-.footer__policy-list a:hover {
+.footer__policy-list--inline a:hover {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1200px) {
+  .footer__menu-grid {
+    gap: 1.4rem;
+  }
+
+  .footer__menu-link {
+    white-space: normal;
+  }
+}
+
 @media screen and (max-width: 989px) {
-  .footer__layout,
-  .footer__bottom {
+  .footer__layout {
     grid-template-columns: 1fr;
     row-gap: 1.5rem;
   }
