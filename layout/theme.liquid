@@ -60,12 +60,8 @@
           :root,
         {%- endif %}
         .color-{{ scheme.id }} {
-          --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-        {% if scheme.settings.background_gradient != empty %}
-          --gradient-background: {{ scheme.settings.background_gradient }};
-        {% else %}
-          --gradient-background: {{ scheme.settings.background }};
-        {% endif %}
+          --color-background: 247,244,239;
+          --gradient-background: #F7F4EF;
 
         {% liquid
           assign background_color = scheme.settings.background
@@ -84,13 +80,13 @@
         --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};
         --color-button: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
         --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
-        --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-secondary-button: 247,244,239;
         --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
         --color-link: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
         --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-        --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
+        --color-badge-background: 247,244,239;
         --color-badge-border: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
-        --payment-terms-background-color: rgb({{ scheme.settings.background.rgb }});
+        --payment-terms-background-color: rgb(247, 244, 239);
       }
       {% endfor %}
 
@@ -292,6 +288,98 @@
         onload="this.media='all'"
       >
     {%- endif -%}
+
+    <style>
+      /* Codex override: enforce global typography/colors in code (menu rules remain untouched) */
+      :root {
+        --font-body-family: "Tiempos Text", serif !important;
+        --font-body-style: normal !important;
+        --font-body-weight: 400 !important;
+
+        --font-heading-family: "Canela", serif !important;
+        --font-heading-style: normal !important;
+        --font-heading-weight: 700 !important;
+
+        --color-foreground: 40, 63, 53 !important;
+        --color-background: 247, 244, 239 !important;
+        --gradient-background: rgb(247, 244, 239) !important;
+      }
+
+      body {
+        color: #283F35 !important;
+        background-color: #F7F4EF !important;
+        font-family: "Tiempos Text", serif !important;
+        letter-spacing: 0.4pt !important;
+      }
+
+      p,
+      .rte,
+      .rte p,
+      input,
+      textarea,
+      select,
+      button {
+        font-family: "Tiempos Text", serif !important;
+        letter-spacing: 0.4pt !important;
+      }
+
+      h1,
+      h2,
+      .h0,
+      .h1,
+      .h2 {
+        font-family: "Canela", serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 4.2pt !important;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6,
+      .h3,
+      .h4,
+      .h5,
+      .subtitle,
+      .caption-with-letter-spacing {
+        font-family: "Neue Haas Grotesk Text", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+        letter-spacing: 1.8pt !important;
+      }
+
+
+      /* Keep menu exactly as before */
+      .header__menu-item,
+      .header__inline-menu .list-menu__item,
+      .menu-drawer__menu-item {
+        font-family: "Soehne", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+        font-size: 1.25rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.12em !important;
+        text-transform: uppercase !important;
+        line-height: 1 !important;
+        padding: 1.2rem 1.6rem !important;
+      }
+
+      .header__menu-item {
+        opacity: 0.85;
+      }
+
+      .header__menu-item:hover {
+        opacity: 1;
+      }
+
+      .header__menu-item::after {
+        display: none !important;
+      }
+
+      .header__menu-item .icon-caret {
+        width: 1rem;
+        height: 1rem;
+        margin-left: 0.4rem;
+        opacity: 0.6;
+      }
+    </style>
+
 
     <script>
       if (Shopify.designMode) {
