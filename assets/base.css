@@ -3697,33 +3697,6 @@ details-disclosure > details {
   }
 }
 /* =====================================
-   BODY + HEADINGS — CANELA
-   ===================================== */
-
-:root {
-  --font-body-family: "Canela", serif;
-  --font-heading-family: "Canela", serif;
-
-  --font-body-style: normal;
-  --font-heading-style: normal;
-
-  --font-body-weight: 400;
-  --font-heading-weight: 500;
-}
-
-/* Body text */
-body {
-  font-family: var(--font-body-family);
-  font-weight: var(--font-body-weight);
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6,
-.h0, .h1, .h2, .h3, .h4, .h5 {
-  font-family: var(--font-heading-family);
-  font-weight: var(--font-heading-weight);
-}
-/* =====================================
    HEADER MENU — SÖHNE (ALL CAPS)
    ===================================== */
 
